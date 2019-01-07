@@ -1,0 +1,28 @@
+body{
+  background-color: black;
+}
+.photo{
+  border: 2px solid gray;
+  border-radius: 100%;
+  height: 300px;
+  width: 300px;
+}
+.about{
+  background-color: ;
+  display: ;
+}
+.about div{
+  display: flex;
+  flex-direction: row;
+  border: 2px solid gray;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px;
+}
+ul{
+
+}
+.projects{
+
+}
+
+stylesheet that uses cascading, the box model, and floats

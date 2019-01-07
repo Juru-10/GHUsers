@@ -1,0 +1,15 @@
+body {
+  background-color:#6FC6F3;
+  color:yellow;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+h1{
+  color:rgb(250,247,0);
+}
+h3,a{
+  color:rgba(20,100,50,0.9);
+}
+li{
+  line-height:30px;
+}
