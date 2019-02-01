@@ -1,3 +1,24 @@
-<p>
-  user works!
-</p>
+<ng-progress></ng-progress>
+<h1>GitHub Users</h1>
+
+<div class="container">
+    <div class="row">
+        <blockquote class="text-center text-lg">
+            <p>{{repo.repo}}</p>
+            <footer><cite>{{repo.author}}</cite></footer>
+        </blockquote>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row" *ngFor="let user of users;let i = 'index'">
+
+            <h4 id="{{i}}" appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h4>
+            <button class="btn btn-primary" (click)=goToUrl(user.id)>View Details</button>
+            <button class="btn btn-danger" (click) = 'deleteUser(i)'> Delete Goal </button>
+    </div>
+
+</div>
+
+<p *ngIf='users.length > 5'>You have too many users</p>
