@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { StrikethroughDirective } from './strikethrough.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     UserComponent,
     AboutComponent,
     NotFoundComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    StrikethroughDirective
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
-import { Repositoty } from './repositoty';
+import { Repository } from './repository';
 
-describe('Repositoty', () => {
+describe('repository', () => {
   it('should create an instance', () => {
-    expect(new Repositoty()).toBeTruthy();
+    expect(new Reposiroty()).toBeTruthy();
   });
 });
