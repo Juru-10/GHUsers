@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import {RouterModule,Routes} from '@angular/router';
 
-import {UserDetailsComponent} from '../user-details.component';
+// import {UserDetailsComponent} from '../user-details.component';
 
 import { UserComponent } from '../user/user.component';
 import { AboutComponent } from '../about/about.component';
@@ -13,8 +13,8 @@ const routes:Routes=[
   {path:"users",component:UserComponent},
   {path:"about",component:AboutComponent},
   {path:"",redirectTo:"/users",pathMatch:"full"},
-  {path:'users/:id',component:UserDetailsComponent},
-  {path:'**',component:NotFoundComponent}
+  // {path:'users/:login',component:UserDetailsComponent},
+  {path:'**',component:NotFoundComponent}]
 
 @NgModule({
   declarations: [],

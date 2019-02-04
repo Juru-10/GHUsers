@@ -1,3 +1,12 @@
-<p>
-  form works!
-</p>
+<form (ngSubmit)='goToUrl(login)' #userForm='ngForm'>
+  <div class="form-group">
+    Enter the Username to search for any GitHub User details
+    <label for="ttl">Username</label>
+    <input type="text" class="form-control" id="username" [(ngModel)]="newUser.username" name="username" #username="ngModel" required>
+
+    <div [hidden]="username.valid||username.pristine" class="alert alert-danger">
+      <p>The Username is Required</p>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success btn-lg">Search</button>
+</form>
