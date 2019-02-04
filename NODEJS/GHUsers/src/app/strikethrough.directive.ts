@@ -5,6 +5,18 @@ import { Directive } from '@angular/core';
 })
 export class StrikethroughDirective {
 
-  constructor() { }
+  constructor(private elem:ElementRef) { }
+
+  @HostListener("click") onClicks(){
+    this.textDeco("blue")
+  }
+
+  @HostListener("dblclick") onDoubleClicks(){
+    this.textDeco("purple")
+  }
+
+  private textDeco(action:string){
+    this.elem.nativeElement.style.color=action;
+  }
 
 }
