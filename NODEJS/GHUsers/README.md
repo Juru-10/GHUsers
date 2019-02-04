@@ -1,27 +1,69 @@
-# GHUsers
+# GitHub User finder App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+#### This is the App called GitHub User finder App because it's where the users can search and find any GitHub User's details, 24th,Jan,2019
 
-## Development server
+#### By **Assumpta Uwanyirijuru**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+This app will allow the user write/enter the GitHub user's username and get the major details about her/his GitHub Account including name, profile and repositories.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup/Installation Requirements
 
-## Build
+* This app can be accessed by anyone;
+* as long as you have an access on the internet,
+* your browser can read Node-js and Angular CLI, TypeScript, html, css and md files.
+* and have the
+*link to it.[https://github.com/Juru-10/GHUsers.git]* on github.
+*and the link to it[https://Juru-10.github.io/GHUsers] on GitHub Pages*
+* You can access its all content.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Known Bugs
 
-## Running unit tests
+This app may not meet all the desired services as you need but,
+It is still in Development and that will be soon resolved.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Behavior Driven Development (BDD).
 
-## Running end-to-end tests
+### Behavior
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+**Our program should handle:**
+1. to write/enter the username,
+2. to know if the user entered and submitted the new username,
+3. to give the username's user details,
 
-## Further help
+### Input Example
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+**When it receives:**
+1. the GitHub user's username and the click on the search button,
+
+### Output Example
+
+**It should return:**
+1. the GitHub User's account details.
+
+## Technologies Used
+It is made by:
+*Node-js*
+*Angular CLI*
+*TypeScript*
+*HTML* and
+*CSS and bootstrap* programming languages.
+
+## Support and contact details
+
+If you meet any issue, have questions, ideas or concerns;please contact me on
+*jurassu10@gmail.com* and any contribution to the code is welcomed and will be much apprecited.
+
+### License & Copyright
+
+*This project is licenced under the MIT license.*
+*Copyright (c) 2019*  ***Juru-10***
+
+**WeCode program under Moringa Project**
+
+### Acknowledgments
+
+**Moringa School Project/WeCode Programming**
+**Technical Mentors**
+**Fellow Students**
