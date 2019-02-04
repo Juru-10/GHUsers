@@ -1,11 +1,12 @@
 import {RoutingModule} from './routing/routing.module'
 
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import {FormsModule} from '@angular/forms'
 import {AlertsService} from './alert-service/alerts.service';
-import {HttpClientModule} from '@angular/common/http';
+
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -41,10 +42,10 @@ const routes:Routes=[
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     RoutingModule,
-    HttpClientModule,
     // NgProgressModule.forRoot(),// normal progress bar
     NgProgressHttpModule,
     RouterModule.forRoot(routes)

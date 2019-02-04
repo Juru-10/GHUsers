@@ -1,7 +1,7 @@
 <!-- <ng-progress></ng-progress> -->
 <h1>GitHub Users</h1>
 
-<!-- <div class="container">
+<div class="container">
     <div class="row">
         <blockquote class="text-center text-lg">
             <p>{{repository.name}}</p>
@@ -9,22 +9,26 @@
         </blockquote>
     </div>
 
-</div> -->
-<!-- <div class="container"> -->
-
-<!-- </div> -->
+</div>
 <div class="container">
-  
   <div class="row">
       <app-form (addUser)="addNewUser($event)"></app-form>
   </div>
+</div>
+<div class="container">
+
+
   <div class="row" *ngFor="let user of users;let i = 'index'">
 
-    <h4 id="{{i}}" appStrikethrough>{{user.login}} due on {{user.deleteDate|date|uppercase}}</h4>
-    <button class="btn btn-primary" (click)=goToUrl(login)>View Details</button>
+    <h4 id="{{i}}" appStrikethrough>{{user.name}}</h4>
+    <!-- <button class="btn btn-primary" (click)=goToUrl(login)>View Details</button> -->
     <!-- <button class="btn btn-danger" (click) = 'deleteUser(i)'> Delete User </button> -->
   </div>
-
+  <!-- <blockquote class="text-center text-lg"> -->
+      <!-- <p>{{user.login}}</p> -->
+      <!-- <footer><cite>{{user.public_repos}}</cite></footer> -->
+  <!-- </blockquote> -->
+  <!-- <app-user-details></app-user-details> -->
 </div>
 
 <p *ngIf='users.length > 5'>You have too many users</p>
