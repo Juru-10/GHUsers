@@ -7,19 +7,24 @@ import {User} from '../user';
 export class UserRequestService {
   user:User;
 
-  // private apiUrl:"https://api.github.com/users/"+this.username+"?access_token=c3c72c2dc8324f0aca213bb0d00b097e65544a67"
-
   private username:string;
 
   constructor(private http:HttpClient) {
-    this.username='Juru-10';
+    this.username='';
     // this.user=new User('');
   }
 
   getProfInfo(){
-    return this.http.get("https://api.github.com/users/"+this.username+"?access_token=c3c72c2dc8324f0aca213bb0d00b097e65544a67");
+    return this.http.get("https://api.github.com/users/"+this.username+"?access_token=dafcfb2bebf239c80358a6fd232a12745193706f");
   }
 
+  getRepos(){
+    return this.http.get("https://api.github.com/users/"+this.username+"/repos?access_token=dafcfb2bebf239c80358a6fd232a12745193706f");
+  }
+
+  getUser(username:string){
+    this.username=username;
+  }
   // userRequest(){
 
    // interface ApiResponse{

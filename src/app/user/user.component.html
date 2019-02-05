@@ -11,12 +11,23 @@
     </div>
 
 </div> -->
-<!-- <div class="container">
-  <div class="row">
-      <app-form (addUser)="addNewUser($event)"></app-form>
-  </div>
+<h1>GitHub Users Finder</h1><hr>
+
+<div class="container-fluid">
+  <form (ngSubmit)='findUser()' #userForm='ngForm'>
+    <div class="form-group">
+      <!-- Enter the Username to search for any GitHub User details -->
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" [(ngModel)]="usernameText" name="username" #username="ngModel" (keyup)='findUser()' required>
+
+      <div [hidden]="username.valid||username.pristine" class="alert alert-danger">
+        <p>The Username is Required</p>
+      </div>
+    </div>
+  </form>
 </div>
-<div class="container"> -->
+
+<!-- <div class="container"> -->
 
 
   <!-- <div class="row" *ngFor="let user of users;let i = 'index'"> -->
@@ -31,18 +42,31 @@
   <!-- </blockquote> -->
   <!-- <app-user-details></app-user-details> -->
 <div class="container">
-  <h1>GitHub Users Finder</h1><hr>
-  <div *ngIf="profile">
-    <div class="row">
+
+  <div *ngIf="profile" class="row">
+    <div class="col-md-4">
       <h3>{{profile.name}}</h3>
-      Username:<h3>{{profile.login}}</h3>
       <img src="{{profile.avatar_url}}" alt="Profile Image">
+      <h3>{{profile.login}}</h3>
+    </div>
+    <div class="col-md-4">
+      <div class="prof">
+        <h5 *ngIf="profile.company">Works at {{profile.company}}</h5>
+        <h6><a href="{{profile.html_url}}">Link to GitHub Profile</a></h6>
+        <h6>{{profile.public_repos}} Public <a href="{{profile.repos_url}}">Repositories</a> on GitHub</h6>
+      </div>
     </div>
 
-    <div class="row">
-      <h6>{{profile.public_repos}} Public Repositories</h6>
-      <h5 *ngIf="profile.company">Works at {{profile.company}}</h5>
-
+    <div class="col-md-4">
+      <h3>Repositories and links to the on GitHub</h3>
+      <div class="repo" *ngFor="let repo of repos">
+        <ul>
+          <li>
+            <h5>{{repo.name}} <a href="{{repo.html_url}}">On GitiHub</a></h5>
+            <p>{{repo.description}}</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

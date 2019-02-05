@@ -36,17 +36,27 @@ export class UserComponent implements OnInit {
   //     // this.user.login;
   // }
   profile:any;
+  repos:any;
+  usernameText:string;
 
   constructor(private userRequestService:UserRequestService,userService:UserService,alertService:AlertsService,private repositoryService:RepositoryRequestService, private router:Router) {
     // this.users = userService.getUsers();
     // this.alertService = alertService;
+
+  }
+  findUser(){
+    this.userRequestService.getUser(this.usernameText);
     this.userRequestService.getProfInfo().subscribe(profile =>{console.log(profile);
     this.profile=profile;
     });
+    this.userRequestService.getRepos().subscribe(repos =>{console.log(repos);
+    this.repos=repos;
+    console.log(this.usernameText)
+  });
 
   }
-
   ngOnInit() {
+
     // this.repositoryService.repositoryRequest()
     // this.repository=this.repositoryService.repository
   }
