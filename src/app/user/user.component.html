@@ -48,7 +48,9 @@
       <h3>{{profile.name}}</h3>
       <img src="{{profile.avatar_url}}" alt="Profile Image">
       <h3>{{profile.login}}</h3>
+      <h5>Profile Created {{profile.timerDate|dateCount}} days ago</h5>
     </div>
+
     <div class="col-md-4">
       <div class="prof">
         <h5 *ngIf="profile.company">Works at {{profile.company}}</h5>
@@ -62,7 +64,7 @@
       <div class="repo" *ngFor="let repo of repos">
         <ul>
           <li>
-            <h5>{{repo.name}} <a href="{{repo.html_url}}">On GitiHub</a></h5>
+            <h4 appStrikethrough>{{repo.name}} <a href="{{repo.html_url}}">On GitiHub</a></h4>
             <p>{{repo.description}}</p>
           </li>
         </ul>

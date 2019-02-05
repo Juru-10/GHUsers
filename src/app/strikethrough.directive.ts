@@ -8,11 +8,11 @@ export class StrikethroughDirective {
   constructor(private elem:ElementRef) { }
 
   @HostListener("click") onClicks(){
-    this.textDeco("blue")
+    this.textDeco("green")
   }
 
   @HostListener("dblclick") onDoubleClicks(){
-    this.textDeco("purple")
+    this.textDeco("magenta")
   }
 
   private textDeco(action:string){

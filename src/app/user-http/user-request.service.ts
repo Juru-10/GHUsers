@@ -11,7 +11,6 @@ export class UserRequestService {
 
   constructor(private http:HttpClient) {
     this.username='';
-    // this.user=new User('');
   }
 
   getProfInfo(){
