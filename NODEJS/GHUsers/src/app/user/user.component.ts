@@ -19,30 +19,36 @@ import {UserRequestService} from '../user-http/user-request.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  users=Users;
-  alertService:AlertsService;
-  user:User;
+  // users=Users;
+  // repository=Repository;
+  // alertService:AlertsService;
+  // user:User;
+  //
+  // goToUrl(id){
+  //   this.router.navigate(['/users',id])
+  // }
+  //
+  // addNewUser(user){
+  //     // let userLength=this.users.length;
+  //     // user.id=userLength+1;
+  //     // user.deleteDate=new Date(user.deleteDate)
+  //     this.users.push(user)
+  //     // this.user.login;
+  // }
+  profile:any;
 
-  goToUrl(id){
-    this.router.navigate(['/users',id])
-  }
+  constructor(private userRequestService:UserRequestService,userService:UserService,alertService:AlertsService,private repositoryService:RepositoryRequestService, private router:Router) {
+    // this.users = userService.getUsers();
+    // this.alertService = alertService;
+    this.userRequestService.getProfInfo().subscribe(profile =>{console.log(profile);
+    this.profile=profile;
+    });
 
-  addNewUser(user){
-      // let userLength=this.users.length;
-      // user.id=userLength+1;
-      // user.deleteDate=new Date(user.deleteDate)
-      this.users.push(user)
-      // this.user.login;
-  }
-
-  constructor(userService:UserService,alertService:AlertsService,private repositoryService:RepositoryRequestService, private router:Router) {
-    this.users = userService.getUsers();
-    this.alertService = alertService;
   }
 
   ngOnInit() {
-    this.repositoryService.repositoryRequest()
-    this.repository=this.repositoryService.repo
+    // this.repositoryService.repositoryRequest()
+    // this.repository=this.repositoryService.repository
   }
 
 }

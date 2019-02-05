@@ -5,7 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
 import {FormsModule} from '@angular/forms'
-import {AlertsService} from './alert-service/alerts.service';
+// import {AlertsService} from './alert-service/alerts.service';
+import {UserRequestService} from './user-http/user-request.service';
 
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
@@ -50,7 +51,7 @@ const routes:Routes=[
     NgProgressHttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AlertsService],
+  providers: [UserRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

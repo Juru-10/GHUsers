@@ -5,5 +5,5 @@
 //   }
 // }
 export class User {
-  constructor(public login:string){}
+  constructor(public login:any){}
 }
