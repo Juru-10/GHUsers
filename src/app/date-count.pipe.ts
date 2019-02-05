@@ -1,16 +1,9 @@
 import { Pipe, PipeTransform} from '@angular/core';
-// import {UserComponent} from '../user.component';
 @Pipe({
   name: 'dateCount'
 })
 
 export class DateCountPipe implements PipeTransform {
-  // constructor(userRequestService:UserRequestService){
-  //   this.userRequestService.getProfInfo().subscribe(created_at =>{console.log(created_at);
-  //   this.profile.created_at=profile;});
-  // }
-  // profile:any;
-  // // value=this.profile.;
 
   transform(value: any): number {
     let today:Date= new Date();
