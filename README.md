@@ -1,4 +1,4 @@
-# GitHub User finder App
+# GitHub User Finder App
 
 #### This is the App called GitHub User finder App because it's where the users can search and find any GitHub User's details, 24th,Jan,2019
 
