@@ -48,7 +48,7 @@
       <h3>{{profile.name}}</h3>
       <img src="{{profile.avatar_url}}" alt="Profile Image">
       <h3>{{profile.login}}</h3>
-      <h5>Profile Created {{profile.created_at|dateCount}} days ago</h5>
+      <h5>Profile Created at {{profile.created_at|dateCount}}</h5>
     </div>
 
     <div class="col-md-4">
@@ -60,7 +60,7 @@
     </div>
 
     <div class="col-md-4">
-      <h3>Repositories and links to the on GitHub</h3>
+      <h3>Repositories and their links to GitHub</h3>
       <div class="repo" *ngFor="let repo of repos">
         <ul>
           <li>
