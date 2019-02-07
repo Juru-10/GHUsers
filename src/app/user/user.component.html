@@ -22,7 +22,7 @@
       <h3>{{profile.name}}</h3>
       <img src="{{profile.avatar_url}}" alt="Profile Image">
       <h3>{{profile.login}}</h3>
-      <h5>Profile Created at {{profile.created_at|dateCountPipe}}</h5>
+      <h5>Profile Created {{profile.created_at|date|dateCountPipe}} years ago</h5>
     </div>
 
     <div class="col-md-4">
