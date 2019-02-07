@@ -1,7 +1,6 @@
 <div class="container-fluid">
   <form (ngSubmit)='findUser()' #userForm='ngForm'>
     <div class="form-group">
-      <!-- Enter the Username to search for any GitHub User details -->
       <label for="username">Username</label>
       <input type="text" class="form-control" id="username" [(ngModel)]="usernameText" name="username" #username="ngModel" required>
 

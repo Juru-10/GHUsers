@@ -1,23 +1,11 @@
-<!-- <ng-progress></ng-progress> -->
-<!-- <h1>GitHub Users</h1> -->
+<ng-progress></ng-progress>
 
-<!-- <div class="container"> -->
-
-    <!-- <div class="row"> -->
-        <!-- <blockquote class="text-center text-lg"> -->
-            <!-- <p>{{user.name}}</p> -->
-            <!-- <footer><cite>{{repository.description}}</cite></footer> -->
-        <!-- </blockquote>
-    </div>
-
-</div> -->
 <h1>GitHub Users Finder</h1><hr>
 
 <div class="container-fluid">
   <form (ngSubmit)='findUser()' #userForm='ngForm'>
     <div class="form-group">
-      <!-- Enter the Username to search for any GitHub User details -->
-      <label for="username">Username</label>
+      <label for="username">Enter the User Username</label>
       <input type="text" class="form-control" id="username" [(ngModel)]="usernameText" name="username" #username="ngModel" (keyup)='findUser()' required>
 
       <div [hidden]="username.valid||username.pristine" class="alert alert-danger">
@@ -27,20 +15,6 @@
   </form>
 </div>
 
-<!-- <div class="container"> -->
-
-
-  <!-- <div class="row" *ngFor="let user of users;let i = 'index'"> -->
-
-    <!-- <h4 id="{{i}}" appStrikethrough>{{user.name}}</h4> -->
-    <!-- <button class="btn btn-primary" (click)=goToUrl(login)>View Details</button> -->
-    <!-- <button class="btn btn-danger" (click) = 'deleteUser(i)'> Delete User </button> -->
-  <!-- </div> -->
-  <!-- <blockquote class="text-center text-lg"> -->
-      <!-- <p>{{user.login}}</p> -->
-      <!-- <footer><cite>{{user.public_repos}}</cite></footer> -->
-  <!-- </blockquote> -->
-  <!-- <app-user-details></app-user-details> -->
 <div class="container">
 
   <div *ngIf="profile" class="row">
@@ -64,7 +38,7 @@
       <div class="repo" *ngFor="let repo of repos">
         <ul>
           <li>
-            <h4 appStrikethrough>{{repo.name}} <a href="{{repo.html_url}}">On GitiHub</a></h4>
+            <h4 id="{{i}}" appStrikethrough>{{repo.name}} <a href="{{repo.html_url}}">On GitiHub</a></h4>
             <p>{{repo.description}}</p>
           </li>
         </ul>
@@ -72,4 +46,3 @@
     </div>
   </div>
 </div>
-<!-- <p *ngIf='users.length > 5'>You have too many users</p> -->

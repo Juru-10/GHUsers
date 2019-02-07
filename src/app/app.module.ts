@@ -1,4 +1,4 @@
-import {RoutingModule} from './routing/routing.module'
+import {RoutingModule,rcomponents} from './routing/routing.module'
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,11 +12,11 @@ import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { AboutComponent } from './about/about.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+// import { NotFoundComponent } from './not-found/not-found.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
@@ -26,7 +26,7 @@ const routes:Routes=[
   {path:"users",component:UserComponent},
   {path:"about",component:AboutComponent},
   {path:"",redirectTo:"/users",pathMatch:"full"},
-  {path:'**',component:NotFoundComponent}
+  // {path:'**',component:NotFoundComponent}
 
 ]
 
@@ -35,7 +35,7 @@ const routes:Routes=[
     AppComponent,
     UserComponent,
     AboutComponent,
-    NotFoundComponent,
+    // NotFoundComponent,
     UserDetailsComponent,
     StrikethroughDirective,
     DateCountPipe,
@@ -47,7 +47,7 @@ const routes:Routes=[
     AppRoutingModule,
     FormsModule,
     RoutingModule,
-    // NgProgressModule.forRoot(),// normal progress bar
+    NgProgressModule,// normal progress bar
     NgProgressHttpModule,
     RouterModule.forRoot(routes)
   ],

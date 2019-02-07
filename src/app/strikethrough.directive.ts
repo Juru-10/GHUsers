@@ -12,7 +12,7 @@ export class StrikethroughDirective {
   }
 
   @HostListener("dblclick") onDoubleClicks(){
-    this.textDeco("magenta")
+    this.textDeco("red")
   }
 
   private textDeco(action:string){

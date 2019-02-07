@@ -6,13 +6,14 @@ import {RouterModule,Routes} from '@angular/router';
 
 import { UserComponent } from '../user/user.component';
 import { AboutComponent } from '../about/about.component';
-import { NotFoundComponent } from '../not-found/not-found.component';
+// import { NotFoundComponent } from '../not-found/not-found.component';
 
 const routes:Routes=[
-  {path:"users",component:UserComponent},
+  {path:"user",component:UserComponent},
   {path:"about",component:AboutComponent},
   {path:"",redirectTo:"/users",pathMatch:"full"},
-  {path:'**',component:NotFoundComponent}]
+  // {path:'**',component:NotFoundComponent}
+]
 
 @NgModule({
   declarations: [],
@@ -23,3 +24,4 @@ const routes:Routes=[
   exports:[RouterModule],
 })
 export class RoutingModule { }
+export const rcomponents=[AboutComponent,UserComponent]
